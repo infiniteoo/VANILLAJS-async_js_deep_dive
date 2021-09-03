@@ -44,3 +44,12 @@ const promise4 = fetch("https://jsonplaceholder.typicode.com/users").then(
 Promise.all([promise1, promise2, promise3, promise4]).then((values) =>
   console.log(values)
 );
+
+// <async / await
+
+async function init() {
+  await createPost({ title: "Post Three", body: "This is post three" });
+  getPosts();
+}
+
+init();
